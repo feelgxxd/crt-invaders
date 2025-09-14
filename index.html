@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Space Invaders — feelgxxd retro collection</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <!-- Shared retro styling -->
+  <link rel="stylesheet" href="game.css">
+  <script defer src="game.js"></script>
+</head>
+<body>
+  <div id="game-container">
+    <div id="game-header">
+      <h1>Invaders</h1>
+      <div id="scoreboard">
+        <span>Score: <span id="score">0</span></span>
+        <span>Level: <span id="level">1</span></span>
+      </div>
+    </div>
+
+    <div id="game-frame">
+      <canvas id="board"></canvas>
+    </div>
+  </div>
+
+  <div id="game-over-overlay" class="hidden">
+    <div id="game-over-content">
+      <h2>Game Over</h2>
+      <p>Your score: <span id="final-score">0</span></p>
+      <button id="restart-btn">Restart</button>
+    </div>
+  </div>
+</body>
+</html>

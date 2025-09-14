@@ -1,0 +1,126 @@
+/* Global retro styling */
+body {
+    font-family: "Press Start 2P", monospace;
+    background-color: #121212;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Container */
+  #game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  #game-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  h1 {
+    font-size: 22px;
+    color: #FFB500;
+    text-shadow: 0 0 10px #FF8400;
+    margin-bottom: 8px;
+  }
+  
+  #scoreboard {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 14px;
+  }
+  
+  /* Game frame */
+  #game-frame {
+    padding: 15px;
+    border: 5px solid #FFB500;
+    border-radius: 10px;
+    background-color: #cbcbcb;
+    box-shadow: 0 0 20px #FFEC40;
+  }
+  
+  canvas {
+    display: block;
+    background-color: #131313;
+    width: 512px;
+    height: 512px;
+    image-rendering: pixelated;
+    position: relative;
+  }
+  
+  /* Subtle CRT scanlines */
+  canvas::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.05) 0,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 2px,
+      transparent 3px
+    );
+    pointer-events: none;
+  }
+  
+  /* Game over overlay */
+  #game-over-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(18, 18, 18, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    font-family: "Press Start 2P", monospace;
+    color: #FFB500;
+    text-shadow: 0 0 10px #FF8400;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  #game-over-overlay:not(.hidden) {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  #game-over-content {
+    background-color: #131313;
+    border: 5px solid #FFB500;
+    border-radius: 15px;
+    padding: 30px 50px;
+    text-align: center;
+    box-shadow: 0 0 20px #FFEC40;
+  }
+  
+  #restart-btn {
+    font-family: "Press Start 2P", monospace;
+    font-size: 14px;
+    background-color: #FFB500;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 25px;
+    color: #131313;
+    cursor: pointer;
+    box-shadow: 0 0 10px #FF8400;
+    transition: background-color 0.3s ease;
+  }
+  
+  #restart-btn:hover {
+    background-color: #FF8400;
+  }
+  
