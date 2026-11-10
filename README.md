@@ -1,3 +1,5 @@
+<a href="https://github.com/feelgxxd"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/feelgxxd/feelgxxd/main/assets/banners/crt-invaders-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/feelgxxd/feelgxxd/main/assets/banners/crt-invaders-light.svg"><img alt="crt-invaders, a feelgxxd tape" src="https://raw.githubusercontent.com/feelgxxd/feelgxxd/main/assets/banners/crt-invaders-dark.svg" width="100%"></picture></a>
+
 # CRT Invaders
 
 A small Space Invaders–inspired arcade game with a CRT-style visual aesthetic.
